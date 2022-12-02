@@ -1,3 +1,0 @@
-# Spring
-
-source: `{{ page.path }}`

@@ -1,3 +1,0 @@
-# Django
-
-source: `{{ page.path }}`
