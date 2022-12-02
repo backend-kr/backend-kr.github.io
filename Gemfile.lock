@@ -264,7 +264,9 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-paginate
   jekyll-rtd-theme!
+  jekyll-sitemap
 
 BUNDLED WITH
    1.17.2
