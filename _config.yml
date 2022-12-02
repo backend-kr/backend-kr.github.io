@@ -1,4 +1,4 @@
-title: jekyll-rtd-theme
+title: Backend-kr
 description: Just another documentation theme compatible with GitHub Pages
 
 theme: null
@@ -12,9 +12,7 @@ readme_index:
   with_frontmatter: true
 
 plugins:
-  - jemoji
   - jekyll-avatar
-  - jekyll-mentions
 
 exclude:
   - Makefile

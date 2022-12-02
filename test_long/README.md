@@ -2,12 +2,10 @@
 sort: 2
 ---
 
-# This is an incredibly long caption for a long menu
+# FrameWorks
 
 ```
-{% raw %}{% include list.liquid all=true %}{% endraw %}
-
-{% include list.liquid all=true %}
+Hello World
 ```
 
 {% include list.liquid all=true %}
