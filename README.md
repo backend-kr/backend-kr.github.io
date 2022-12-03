@@ -1,183 +1,108 @@
-# Read The Docs Theme for Jekyll and GitHub Pages
+<p align="right">
+    <a href="https://badge.fury.io/rb/just-the-docs"><img src="https://badge.fury.io/rb/just-the-docs.svg" alt="Gem version"></a> <a href="https://github.com/just-the-docs/just-the-docs/actions/workflows/ci.yml"><img src="https://github.com/just-the-docs/just-the-docs/actions/workflows/ci.yml/badge.svg" alt="CI Build status"></a> <a href="https://app.netlify.com/sites/just-the-docs/deploys"><img src="https://api.netlify.com/api/v1/badges/9dc0386d-c2a4-4077-ad83-f02c33a6c0ca/deploy-status" alt="Netlify Status"></a>
+</p>
+<br><br>
+<p align="center">
+    <h1 align="center">Just the Docs</h1>
+    <p align="center">A modern, highly customizable, and responsive Jekyll theme for documentation with built-in search.<br>Easily hosted on GitHub Pages with few dependencies.</p>
+    <p align="center"><strong><a href="https://just-the-docs.github.io/just-the-docs/">See it in action!</a></strong></p>
+    <br><br><br>
+</p>
 
-Port of the Read the Docs theme to Jekyll that can be used with GitHub Pages.
+![jtd](https://user-images.githubusercontent.com/896475/47384541-89053c80-d6d5-11e8-98dc-dba16e192de9.gif)
 
-You can preview it in the
-[user documentation](https://carlosperate.github.io/jekyll-theme-rtd):
+## Installation
 
-![theme screenshot](docs/assets/img/screenshot.png)
+### Use the template
 
-The original [Read The Docs](https://sphinx-rtd-theme.readthedocs.io)
-theme was created for [Sphinx](https://www.sphinx-doc.org/), and so it is
-designed specifically for documentation.
+The [Just the Docs Template] provides the simplest, quickest, and easiest way to create a new website that uses the Just the Docs theme. To get started with creating a site, just click "[use the template]"!
 
-Combined with [GitHub Pages](https://pages.github.com) it's a great and easy
-way to document your projects!
+Note: To use the theme, you do ***not*** need to clone or fork the [Just the Docs repo]! You should do that only if you intend to browse the theme docs locally, contribute to the development of the theme, or develop a new theme based on Just the Docs.
 
-Check out the [quick start guide]() to see how easy it is to 
+You can easily set the site created by the template to be published on [GitHub Pages] – the [template README] file explains how to do that, along with other details.
 
-### 🚧 Warning!
+If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^2] And you will be able to deploy your local build to a different platform than GitHub Pages.
 
-This theme is currently a **Work-In-Progress** but, while some things might be
-broken, it should be already usable.
+More specifically, the created site:
 
-Missing features are listed in the GitHub issues with the
-[to-do label](https://github.com/carlosperate/jekyll-theme-rtd/issues?q=is%3Aissue+is%3Aopen+label%3Ato-do),
-and any known issues are listed with the
-[bug label](https://github.com/carlosperate/jekyll-theme-rtd/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
+- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
+- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
 
-Contributions are very welcomed!
+Other than that, you're free to customize sites that you create with the template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
 
+### Use RubyGems
 
-## 🗂️ Readme Contents
+Alternatively, you can install the theme as a Ruby Gem, without creating a new site.
 
-This README contains mostly the developer documentation to edit this theme.
+Add this line to your Jekyll site's `Gemfile`:
 
-To learn how to use this theme for your own website or docs check out the
-[user documentation](https://carlosperate.github.io/jekyll-theme-rtd).
-
-- [🚀 Using this theme with GitHub Pages](#-using-this-theme-with-github-pages)
-- [👩‍💻 Developer Documentation](#-developer-documentation)
-    - [Run in a virtual machine with Vagrant](#run-in-a-virtual-machine-with-vagrant)
-    - [Run locally with Ruby](#run-locally-with-ruby)
-    - [Build the docs using the remote theme](#build-the-docs-using-the-remote-theme)
-    - [Build the docs with MkDocs for comparison](#build-the-docs-with-mkdocs-for-comparison)
-- [👨‍👩‍👧‍👦 Contributing](#-contributing)
-- [⚖️ License](#%EF%B8%8F-license)
-
-
-## 🚀 Using this theme with GitHub Pages
-
-The fastest way to use this theme is with GitHub Pages, check out the
-[Quick Start Guide from the user documentation](https://carlosperate.github.io/jekyll-theme-rtd/quickstart.html).
-
-## 👩‍💻 Developer Documentation
-
-These instructions describe two different ways to to set up your environment to
-develop or edit this theme.
-
-The theme is developed like a normal Jekyll site, and it can serve the
-documentation using the theme source code located here.
-
-### Run in a virtual machine with Vagrant
-
-[Vagrant](https://www.vagrantup.com) provides an easy way to set up and manage
-a Virtual Machine with [VirtualBox](https://www.virtualbox.org). With a single
-command you can automatically create the VM with all the dependencies required
-to build and sever this project.
-
-There is a [Vagrantfile](Vagrantfile) included to run an Ubuntu VM with Ruby
-and Jekyll. To set-up everything and serve the website run:
-
-```bash
-$ vagrant up
+```ruby
+gem "just-the-docs"
 ```
 
-The first time you run this command it will take a bit longer, as it downloads
-and installs everything. Subsequent runs will be much quicker.
+And add this line to your Jekyll site's `_config.yml`:
 
-This will serve the website at [http://localhost:4000](http://localhost:4000)
-with a hot-reload enabled, so any changes made on these files will trigger a
-rebuild.
-
-#### Other Vagrant commands
-
-To stop the virtual machine first press `Ctrl+C` to end the Jekyll process and
-execute in your terminal:
-
-```
-$ vagrant halt
+```yaml
+theme: just-the-docs
 ```
 
-You can also SSH into the virtual machine with:
+And then execute:
 
-```
-$ vagrant ssh
-```
+    $ bundle
 
-### Run locally with Ruby
+Or install it yourself as:
 
-This website has been developed using Ruby v2.5. You can install the
-dependencies with:
+    $ gem install just-the-docs
 
-```bash
-$ gem install bundler
-$ bundle install
-```
+Alternatively, you can run it inside Docker while developing your site
 
-### Build the docs using the remote theme
+    $ docker-compose up
 
-The Jekyll project here is configured with the root of this repository as the
-root of the website, so when it is built locally it will see all pages as being
-inside a "docs" folder, and therefore in the "docs" category in the left
-navigation bar and page URLs.
+## Usage
 
-On the other hand the root of the website built and served with
-[GitHub Pages](https://carlosperate.github.io/jekyll-theme-rtd) is the
-"docs" folder, so the left navigation bar will show the child folder as
-categories and the URLs will be different.
+[View the documentation][Just the Docs] for usage information.
 
-For updating the theme documentation it can be useful to build and sever the
-docs folder with the same configuration as GitHub Pages. Of course, this would
-mean that the theme used will be the current snapshot of `master` on GitHub
-instead of the local files, but that is not important to just preview the docs.
+## Contributing
 
-To do this, add the following lines to the `docs/_config.yml` file:
+Bug reports, proposals of new features, and pull requests are welcome on GitHub at https://github.com/just-the-docs/just-the-docs. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-```yml
-plugins:
-  - jekyll-remote-theme
-```
+### Submitting code changes:
 
-Then execute Jekyll from the docs folder:
+- Submit an [Issue](https://github.com/just-the-docs/just-the-docs/issues) that motivates the changes, using the appropriate template
+- Discuss the proposed changes with other users and the maintainers
+- Open a [Pull Request](https://github.com/just-the-docs/just-the-docs/pulls)
+- Ensure all CI tests pass
+- Provide instructions to check the effect of the changes
+- Await code review
 
-```
-$ vagrant up --no-provision
-$ vagrant ssh
-(ssh session) $ cd /vagrant/docs
-(ssh session) $ bundle exec jekyll serve --host 0.0.0.0 --watch --force_polling
-```
+### Design and development principles of this theme:
 
-### Build the docs with MkDocs for comparison
+1. As few dependencies as possible
+2. No build script needed
+3. First class mobile experience
+4. Make the content shine
 
-As this theme has been ported from the MkDocs port, it can be useful to run
-MkDocs on the documentation markdown file and compare its output to the Jekyll
-output. A `mkdocs.yml` file is included to configure the project.
+## Development
 
-Pipenv has been used to manage Python dependencies:
+To set up your environment to develop this theme: fork this repo, the run `bundle install` from the root directory.
 
-```bash
-$ pip install pipenv
-$ pipenv install
-$ pipenv run mkdocs build
-$ cd _site_mkdocs
-$ pipenv run python -m http.server 8080
-```
+A modern [devcontainer configuration](https://code.visualstudio.com/docs/remote/containers) for VSCode is included.
 
+Your theme is set up just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
-## 👨‍👩‍👧‍👦 Contributing
+When this theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be included in the gem.
 
-Bug reports and pull requests are welcome on GitHub at
-https://github.com/carlosperate/jekyll-theme-rtd.
+## License
 
-This project is intended to be a safe, welcoming space for collaboration, and
-contributors are expected to adhere to the
-[Contributor Covenant](http://contributor-covenant.org) code of conduct.
+The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+[^2]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
 
-## ⚖️ License
-
-The original theme is from
-[Read The Docs](https://github.com/readthedocs/sphinx_rtd_theme). Copyright ©
-2013-2018 Dave Snider, Read the Docs, Inc. & contributors, and released under
-the [MIT License](LICENSE-rtd).
-
-This theme is based on the [MkDocs](https://github.com/mkdocs/mkdocs)
-[`readthedocs` port](https://github.com/mkdocs/mkdocs/tree/1.0.4/mkdocs/themes/readthedocs).
-Copyright © 2014, Tom Christie, all rights reserved, and released under the
-[BSD 2-Clause "Simplified" License](LICENSE-mkdocs).
-
-The theme modifications to port it Jekyll can be seen
-[here](https://github.com/carlosperate/jekyll-theme-rtd/compare/dddce9f13fde24c03aee4533158c43091120d47e...master).
-This and all new features are released under the
-[BSD 2-Clause "Simplified" License](LICENSE).
+[Jekyll]: https://jekyllrb.com
+[Just the Docs Template]: https://just-the-docs.github.io/just-the-docs-template/
+[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
+[Just the Docs repo]: https://github.com/just-the-docs/just-the-docs
+[GitHub Pages]: https://pages.github.com/
+[Template README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
+[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
+[use the template]: https://github.com/just-the-docs/just-the-docs-template/generate
