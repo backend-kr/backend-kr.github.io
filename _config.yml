@@ -152,6 +152,8 @@ callouts:
 ga_tracking: UA-2709176-10
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 
+google_site_verification: L8aI5nboMIasphFKbKVqvLGtWJwCE0KLoNP5S_7vwGQ
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
