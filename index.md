@@ -12,4 +12,4 @@ permalink: /
 
 기여자 목록
 - junpark4395@gmail.com
-- jack7141@nate.com
+- ghl92479@gmail.com
