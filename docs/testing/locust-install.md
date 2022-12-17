@@ -38,7 +38,29 @@ locust
 {% highlight default %}
 locust --help
 {% endhighlight %}
+ 
+> --host 등 커맨드 옵션 적용해보기
+{% highlight default %}
+locust -f sample.py --host http://172.16.0.253:8081 --users 4 --spawn-rate 4
+{% endhighlight %}
+### 옵션 설명
+> [host]
+> 
+> 실행할 때 detault로 들어갈 주소를 설정할 수 있습니다.
+> 
+> [users]
+> 
+> 실행할 때 detault로 트래픽을 만들어내는 유저 수를 설정할 수 있습니다.
+> 
+> [spawn-rate]
+> 
+> 실행할 때 detault로 몇초에 한번씩 유저가 추가되는지 설정할 수 있습니다.
+ 
+### 옵션 적용 후 초기 실행 화면
+![](../../assets/images/testing/args.png)
 
+* 상위 host, user, spawn-rate를 사용하지 않을 시 실행할때마다 입력을 해야하는 번거로움이 있을 수 있다.
+  
 
 ## 스크립트 작성
 
@@ -91,4 +113,8 @@ class LocustUser(HttpUser):
 > [on_stop]
 > 
 > Locust가 종료 후 처리할 로직을 처리합니다.
+> 
+> [host]
+> 
+> 상위에서 Locust를 실행할때 옵션인 --host 옵션을 코드상에서 주입하게 해준다.
 
