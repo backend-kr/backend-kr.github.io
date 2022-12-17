@@ -31,7 +31,7 @@ grand_parent: Testing
 
 ## 실시간 결과 페이지
 ![](../../assets/images/testing/chart.png)
-* 상단에서 Chart 패널을 클릭하면 RPS와 Response Times등 시각화 자료도 볼 수 있습니다.
+* 상단에서 Chart 패널을 클릭하면 TPS와 Response Times등 시각화 자료도 볼 수 있습니다.
 
 ![](../../assets/images/testing/chart_1.png)
 ![](../../assets/images/testing/chart_2.png)
