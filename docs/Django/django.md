@@ -4,6 +4,9 @@ title: Django
 nav_order: 3
 has_children: true
 permalink: /docs/Django/django
+sitemap :
+  changefreq : weekly
+  priority : 1.0
 ---
 
 # Django

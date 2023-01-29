@@ -4,6 +4,9 @@ title: Testing
 nav_order: 3
 has_children: true
 permalink: /docs/testing
+sitemap :
+  changefreq : weekly
+  priority : 1.0
 ---
 
 # Testing

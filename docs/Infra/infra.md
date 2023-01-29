@@ -4,6 +4,9 @@ title: Infra
 nav_order: 3
 has_children: true
 permalink: /docs/Infra/infra
+sitemap :
+  changefreq : weekly
+  priority : 1.0
 ---
 
 # Infra

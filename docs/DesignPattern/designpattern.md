@@ -4,6 +4,9 @@ title: DesignPattern
 nav_order: 3
 has_children: true
 permalink: /docs/DesignPattern/DesignPattern
+sitemap :
+  changefreq : weekly
+  priority : 1.0
 ---
 
 # DesignPattern
