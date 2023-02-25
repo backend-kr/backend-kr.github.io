@@ -64,12 +64,14 @@ LOGGING = {
 
 ### 결과
 {% highlight default %}
-[DEBUG 2023-02-25 17:28:29,843 pid: 50] (0.017) SELECT @@SQL_AUTO_IS_NULL; args=None
-[DEBUG 2023-02-25 17:28:29,851 pid: 50] (0.004) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-[DEBUG 2023-02-25 17:28:29,866 pid: 50] (0.013) SELECT VERSION(); args=None
-[DEBUG 2023-02-25 17:28:32,497 pid: 50] (0.002) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-[DEBUG 2023-02-25 17:28:32,505 pid: 50] (0.007) SELECT `django_site`.`id`, `django_site`.`domain`, `django_site`.`name` FROM `django_site` ORDER BY `django_site`.`domain` ASC LIMIT 1; args=()
-[DEBUG 2023-02-25 17:28:32,523 pid: 50] (0.007) SELECT `django_site`.`id`, `django_site`.`domain`, `django_site`.`name` FROM `django_site` ORDER BY `django_site`.`domain` ASC LIMIT 1; args=()
+# DEBUG 포맷 이후에 등장하는 ()의 내부값은 쿼리들이 몇초가 걸렸는지 표시해줍니다. 1초는 1000ms이고, 0.017는 17ms가 됩니다.
+
+[DEBUG 2023-02-25 17:28:29,843 pid: 50] (0.017) SELECT @@SQL_AUTO_IS_NULL; args=None # 17ms
+[DEBUG 2023-02-25 17:28:29,851 pid: 50] (0.004) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None # 4ms
+[DEBUG 2023-02-25 17:28:29,866 pid: 50] (0.013) SELECT VERSION(); args=None # 13ms
+[DEBUG 2023-02-25 17:28:32,497 pid: 50] (0.002) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None # 2ms
+[DEBUG 2023-02-25 17:28:32,505 pid: 50] (0.007) SELECT `django_site`.`id`, `django_site`.`domain`, `django_site`.`name` FROM `django_site` ORDER BY `django_site`.`domain` ASC LIMIT 1; args=() # 7ms
+[DEBUG 2023-02-25 17:28:32,523 pid: 50] (0.007) SELECT `django_site`.`id`, `django_site`.`domain`, `django_site`.`name` FROM `django_site` ORDER BY `django_site`.`domain` ASC LIMIT 1; args=() # 7ms
 {% endhighlight %}
 
 이후 기존 django 디버깅 모드에서 콘솔에서 ORM을 호출하여도, 쿼리셋이 나오게됩니다.
