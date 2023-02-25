@@ -97,3 +97,5 @@ has_children: true
 | __iendswith      | 대소문자를 구분하지 않고 문자열로 끝나는지 여부 확인 | Post.objects.filter(email__endswith='com') - |
 | __range      | range로 제시하는 범위 내에 포함되는지 확인 | Post.objects.filter(created_at__range=(datetime.date(2022,1,1), datetime.date(2023,1,1))  |
 | __isnull      | 해당 필드가 Null인지 여부 확인 | Post.objects.filter(emil__isnull=True) |
+
+
