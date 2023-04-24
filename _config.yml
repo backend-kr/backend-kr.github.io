@@ -157,6 +157,7 @@ google_site_verification: L8aI5nboMIasphFKbKVqvLGtWJwCE0KLoNP5S_7vwGQ
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-remote-theme
 
 kramdown:
   syntax_highlighter_opts:
