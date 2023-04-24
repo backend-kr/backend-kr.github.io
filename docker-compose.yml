@@ -4,8 +4,6 @@ services:
   jekyll:
     build:
       context: ./
-      dockerfile: Dockerfile
-    image: jeklly
     ports:
       - 4000:4000
     volumes:
